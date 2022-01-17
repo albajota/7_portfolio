@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Titillium+Web:ital,wght@0,200;0,400;1,200;1,600&display=swap" rel="stylesheet">
+    <title>Alba Jover - Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        :root{
+            --rosa: #E2536D;
+            --gris: #F2F2F2;
+            --verde: #736140;
+            --serifa: 'DM Serif Display', serif;
+            --paloseco: 'Titillium Web', sans-serif;
+        }
+        html{
+            font-size: 12px;
+        }
+        a:link{
+            text-decoration: none;
+            color: var(--rosa);
+        }
+        a:hover{
+            color: var(--verde);
+        }
+        a:visited{
+            color: var(--rosa);
+        }
+        a:visited:hover{
+            color: var(--verde);
+        }
+
+        /*HEADER*/
+        header{
+            width: 100%;
+            height: 100vh;
+            padding: 100px 129px;
+            display: grid;
+            grid-template-columns: repeat(8 ,1fr);
+            grid-template-rows: repeat(7, 120px);
+            background-image: url('img/bn/6_obra01.jpg');
+            background-size: cover;
+        }
+        .nombre{
+            color: var(--rosa);
+            font-family: var(--serifa);
+            font-size: 10em;
+            grid-column: 1/5;
+            grid-row: 1/3;
+        }
+        .num-trabajos{
+            grid-column: 8/9;
+            grid-row: 1/7;
+        }
+        h2{
+            color: var(--rosa);
+            font-family: var(--serifa);
+            font-size: 8em;
+            text-decoration: none;
+        }
+        .descripcion{
+            color: var(--rosa);
+            font-family: var(--paloseco);
+            font-size: 2em;
+            grid-column: 1/5;
+            grid-row: 7/8;
+        }
+
+        /*MAIN*/
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .project-section{
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .practica-contenido-izq{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 5em;
+            background-color: var(--gris);
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .practica-contenido-dcha{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            padding: 5em;
+            background-color: var(--gris);
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .num-practica{
+            font-family: var(--paloseco);
+            color: var(--verde);
+            font-size: 1.5em;
+        }
+        .project-tile{
+            color: var(--rosa);
+            font-family: var(--serifa);
+            font-size: 7em;
+        }
+        .descripcion-practica-izq{
+            font-family: var(--paloseco);
+            color: var(--verde);
+            font-size: 1.5em;
+            width: 50%;
+            text-align: right;
+        }
+        .descripcion-practica-dcha{
+            font-family: var(--paloseco);
+            color: var(--verde);
+            font-size: 1.5em;
+            width: 50%;
+            text-align: left;
+        }
+        .practica-img{
+            width: 50%;
+        }
+        .img img{
+            width: 50vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /*FOOTER*/
+        footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: var(--gris);
+            padding: 2em;
+        }
+        .rrss-footer{
+            display: flex;
+            flex-direction: row;
+            width: 15%;
+            justify-content: space-between;
+        }
+        footer>p{
+            font-family: var(--serifa);
+            color: var(--rosa);
+        }
+        footer>a{
+            font-family: var(--serifa);
+            color: var(--rosa);
+        }
+
+        /*AQUÍ VA EL TAMAÑO PARA TABLET*/
+        @media (max-width: 768px){
+            /*HEADER*/
+            header{
+                width: 100%;
+                height: 100vh;
+                padding: 55px;
+                display: grid;
+                grid-template-columns: repeat(6 ,1fr);
+                grid-template-rows: repeat(7, 110px);
+                background-image: url('img/bn/6_obra01.jpg');
+                background-size: cover;
+            }
+            .nombre{
+                color: var(--rosa);
+                font-family: var(--serifa);
+                font-size: 8em;
+                grid-column: 1/6;
+                grid-row: 1/2;
+            }
+            .num-trabajos{
+                grid-column: 7/8;
+                grid-row: 1/5;
+            }
+            h2{
+                color: var(--rosa);
+                font-family: var(--serifa);
+                font-size: 5em;
+                text-decoration: none;
+            }
+            .descripcion{
+                color: var(--rosa);
+                font-family: var(--paloseco);
+                font-size: 1.5em;
+                grid-column: 1/5;
+                grid-row: 7/8;
+            }
+
+            /*MAIN*/
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .project-section{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background-color: var(--gris);
+            }
+            .project-section>.uno{
+                order: 1;
+            }
+            .project-section>.dos{
+                order: 2;
+            }
+            .practica-contenido-izq{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 60%;
+                background-color: var(--gris);
+                align-items: flex-end;
+                justify-content: center;
+            }
+            .practica-contenido-dcha{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 60%;
+                background-color: var(--gris);
+                align-items: flex-start;
+                justify-content: center;
+            }
+            .num-practica{
+                font-family: var(--paloseco);
+                color: var(--verde);
+                font-size: 1.5em;
+            }
+            .project-tile{
+                color: var(--rosa);
+                font-family: var(--serifa);
+                font-size: 5em;
+            }
+            .descripcion-practica-izq{
+                font-family: var(--paloseco);
+                color: var(--verde);
+                font-size: 1.5em;
+                width: 50%;
+                text-align: right;
+            }
+            .descripcion-practica-dcha{
+                font-family: var(--paloseco);
+                color: var(--verde);
+                font-size: 1.5em;
+                width: 50%;
+                text-align: left;
+            }
+            .practica-img{
+                width: 50%;
+            }
+            .img img{
+                width: 100vw;
+                height: 50vh;
+            }
+
+            /*FOOTER*/
+            footer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: var(--gris);
+                padding: 2em;
+            }
+            .rrss-footer{
+                display: flex;
+                flex-direction: row;
+                width: 40%;
+                justify-content: space-between;
+            }
+            footer>p{
+                font-family: var(--serifa);
+                color: var(--rosa);
+            }
+            footer>a{
+                font-family: var(--serifa);
+                color: var(--rosa);
+            }
+        }
+
+        /*AQUÍ VA EL TAMAÑO PARA MOVIL*/
+        @media (max-width: 375px){
+            /*HEADER*/
+            header{
+                width: 100%;
+                height: 100vh;
+                padding: 2em;
+                display: grid;
+                grid-template-columns: repeat(4 ,1fr);
+                grid-template-rows: repeat(6, 90px);
+                background-image: url('img/bn/6_obra01.jpg');
+                background-size: cover;
+            }
+            .nombre{
+                color: var(--rosa);
+                font-family: var(--serifa);
+                font-size: 4em;
+                grid-column: 1/4;
+                grid-row: 1/2;
+            }
+            .num-trabajos{
+                grid-column: 5/5;
+                grid-row: 1/;
+            }
+            h2{
+                color: var(--rosa);
+                font-family: var(--serifa);
+                font-size: 4.5em;
+                text-decoration: none;
+            }
+            .descripcion{
+                color: var(--rosa);
+                font-family: var(--paloseco);
+                font-size: 1.5em;
+                grid-column: 1/5;
+                grid-row: 6/7;
+            }
+
+            /*MAIN*/
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+            .project-section{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                background-color: var(--gris);
+            }
+            .practica-contenido-izq{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 50%;
+                background-color: var(--gris);
+                align-items: flex-end;
+                justify-content: center;
+            }
+            .practica-contenido-dcha{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 50%;
+                background-color: var(--gris);
+                align-items: flex-start;
+                justify-content: center;
+            }
+            .num-practica{
+                font-family: var(--paloseco);
+                color: var(--verde);
+                font-size: 1em;
+            }
+            .project-tile{
+                color: var(--rosa);
+                font-family: var(--serifa);
+                font-size: 3em;
+            }
+            .descripcion-practica-izq{
+                font-family: var(--paloseco);
+                color: var(--verde);
+                font-size: 1em;
+                width: 50%;
+                text-align: right;
+            }
+            .descripcion-practica-dcha{
+                font-family: var(--paloseco);
+                color: var(--verde);
+                font-size: 1em;
+                width: 50%;
+                text-align: left;
+            }
+            .practica-img{
+                width: 50%;
+            }
+            .img img{
+                width: 100vw;
+            height: 50vh;
+            }
+
+            /*FOOTER*/
+            footer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: var(--gris);
+                padding: 2em;
+            }
+            .rrss-footer{
+                display: flex;
+                flex-direction: row;
+                width: 60%;
+                justify-content: space-between;
+            }
+            footer>p{
+                font-family: var(--serifa);
+                color: var(--rosa);
+            }
+            footer>a{
+                font-family: var(--serifa);
+                color: var(--rosa);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="welcome-section">
+        <h1 class="nombre">Alba Jover</h1>
+        <div class="num-trabajos">
+            <nav id="navbar">
+                <h2><a href="#p1">1</a></h2>
+                <h2><a href="#p2">2</a></h2>
+                <h2><a href="#p3">3</a></h2>
+                <h2><a href="#p4">4</a></h2>
+                <h2><a href="#p5">5</a></h2>
+                <h2><a href="#p6">6</a></h2>
+            </nav>
+        </div>
+        <p class="descripcion">Hola soy Alba Jover, estudiante de Diseño Grafico en la EASD Alcoi. En esta web encontraras todos mis trabajos realizados para la asignatura de Sistemas de Representacion Avanzados. Un saludo!</p>
+    </header>
+    <main>
+        <div class="container" id="projects">
+            <div class="project-section" id="p1">
+                <div class="practica-contenido-izq" class="uno">
+                        <p class="num-practica">práctica 1</p>
+                        <h3 class="project-tile"><a href="https://albajota.github.io/1_llocweb_2dg/">lloc web 1</a></h3>
+                        <p class="descripcion-practica-izq">Con este ejercicio aprendemos las partes basicas de html para un proyecto.</p>
+                </div>
+                <div class="practica-img" class="dos">
+                    <div class="img">
+                        <img src="img/1_llocweb.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+            <div class="project-section" id="p2">
+                <div class="practica-img" class="dos">
+                    <div class="img">
+                        <img src="img/2_llocweb01.png" alt="">
+                    </div>
+                </div>
+                <div class="practica-contenido-dcha" class="uno">
+                    <p class="num-practica">práctica 2</p>
+                    <h3 class="project-tile"><a href="https://albajota.github.io/2_llocweb_img_2dg/">lloc web 2</a></h3>
+                    <p class="descripcion-practica-dcha">Con este ejercicio aprendemos a como enlazar elementos básicos en html.</p>
+                </div>
+            </div>
+            <div class="project-section" id="p3">
+                <div class="practica-contenido-izq" class="uno">
+                    <p class="num-practica">práctica 3</p>
+                    <h3 class="project-tile"><a href="https://albajota.github.io/3_img_video_audio_css_2dg/">video y audio</a></h3>
+                    <p class="descripcion-practica-izq">En esta práctica aplicamos otro tipo de enlaces como imágenes, videos y audios de diferentes formas.</p>
+                </div>
+                <div class="practica-img" class="dos">
+                    <div class="img">
+                        <img src="img/3_imgvideo01.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="project-section" id="p4">
+                <div class="practica-img" class="dos">
+                    <div class="img">
+                        <img src="img/4_gallery02.png" alt="">
+                    </div>
+                </div>
+                <div class="practica-contenido-dcha" class="uno">
+                    <p class="num-practica">práctica 4</p>
+                    <h3 class="project-tile"><a href="https://albajota.github.io/4_gallery_2dg/">galeria</a></h3>
+                    <p class="descripcion-practica-dcha">En este ejercicio aprendemos a trabajar la función grid del lengiaje css para ordenar el contenido.</p>
+                </div>
+            </div>
+            <div class="project-section" id="p5">
+                <div class="practica-contenido-izq" class="uno">
+                    <p class="num-practica">práctica 5</p>
+                    <h3 class="project-tile"><a href="https://albajota.github.io/5_grid_2DG/">caretes</a></h3>
+                    <p class="descripcion-practica-izq">En esta práctica aprendemos a rediseñar la web en base al tamaño de la pantalla para poder ajustar el diseño a diferentes dispositivos.</p>
+                </div>
+                <div class="practica-img" class="dos">
+                    <div class="img">
+                        <img src="img/5_grid01.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="project-section" id="p6">
+                <div class="practica-img" class="dos">
+                    <div class="img">
+                        <img src="img/6_obra01.png" alt="">
+                    </div>
+                </div>
+                <div class="practica-contenido-dcha" class="uno">
+                    <p class="num-practica">práctica 6</p>
+                    <h3 class="project-tile"><a href="https://albajota.github.io/6_grid_neoplasticista_2DG/">obra</a></h3>
+                    <p class="descripcion-practica-dcha">Con este ejercicio conocemos como aplicar la función de grid-template (retícula) en css para organizar el contenido de otra forma.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="rrss-footer">
+            <p><a href="#">email</a></p>
+            <p><a href="https://www.instagram.com/soyalbajota/">instagram</a></p>
+            <p><a href="https://www.behance.net/soyalbajota">behance</a></p>
+            <p><a href="https://github.com/albajota" id="profile-link">github</a></p>
+        </div>
+        <p>2022</p>
+    </footer>
+</body>
+</html>
